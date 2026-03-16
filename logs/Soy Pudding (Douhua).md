@@ -10,7 +10,30 @@
 
 <div id="en-content" style="display:block;">
   <!---en-->
-  <!--enend-->
+<h2>Bifidobacterium bean curd</h2>
+  <p>Bifidobacterium tofu: Helps improve the balance of intestinal flora, enhance immunity, promote digestive health, and prevent diarrhea and constipation.
+
+</p><p>Effect check: The stool is smooth, soft and well-formed. If you don't mind the estrogen in milk, you can substitute milk for soy.
+
+</p><p>Preparation method:
+	<br>• Prepare a 1000ml borosilicate airtight jar.
+	<br>• Use 100ml non-GMO soybeans or green heart black beans and 25ml peas.
+	<br>• Take the beans out of the freezer, use the dry bean stall of the soymilk machine to emulsify and break the walls, and then use the cleaning function to beat 1-2 more times to further refine the soymilk.
+	<br>• Strain the refined soy milk through a 50-mesh strainer into a bowl or pot, let it sit for a while to allow the bean dregs to settle, and remove the coarse dregs.
+	<br>• Then, pass the primary filtered soy milk through a 100-mesh filter for a more fine secondary filtration to ensure that the soy milk is more delicate.
+	<br>• Finally, pour the filtered soy milk into the fermentation tank.
+	<br>• Carry out sealed high-temperature sterilization, and add fermentation bacteria after the temperature drops to 40 degrees.
+	<br>• Ferment at 37 degrees for 8-12 hours.
+
+</p><p>Strain selection:
+
+</p><p>It is recommended to use pharmaceutical-grade strains, recommend triple bifidobacteria or quadruple bifidobacteria of different species, and try to avoid using strains containing faecium and enterococci to prevent the development of drug resistance.
+
+</p><p>About using commercially available soy milk:
+
+</p><p>If you directly use commercially available soy milk to make tofu curd, the texture of the tofu curd may be hard or too old. However, commercially available soy milk may contain ingredients such as quicklime, non-GMO ingredients, non-RO purified water, and a large number of plastic particles that may be mixed during processing.
+</p>
+<!--enend-->
 </div>
 
 <div id="zh-content" style="display:none;">
