@@ -1,5 +1,5 @@
 
-# Maintaining the Continuity of Lifestyle from the Perspective of Genetics and Human Evolution! / 从遗传学与人test2 类进化角度保持生活方式的延续性
+# Maintaining the Continuity of Lifestyle from the Perspective of Genetics and Human Evolution! / 从遗传学与人类进化角度保持生活方式的延续性
 
 <p>
   <button onclick="document.getElementById('en-content').style.display = 'block'; 
