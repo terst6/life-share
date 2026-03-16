@@ -1,5 +1,5 @@
 
-# Maintaining the Continuity of Lifestyle from the Perspective of Genetics and Human Evolution! / 从遗传学与人test类进化角度保持生活方式的延续性
+# Maintaining the Continuity of Lifestyle from the Perspective of Genetics and Human Evolution! / 从遗传学与人test1 类进化角度保持生活方式的延续性
 
 <p>
   <button onclick="document.getElementById('en-content').style.display = 'block'; 
@@ -10,37 +10,7 @@
 
 <div id="en-content" style="display:block;">
   <!---en-->
-<h2>Maintain the continuity of lifestyle from the perspective of genetics and human evolution</h2>
-  <p>These changes are not to allow us to live as accurately as machines, but to avoid living stupidly, violating a large number of basic principles and guidelines, and entering into misunderstandings that are harmful to health.
-
-  </p><p>This is a systematic summary of my personal life knowledge, recording the process from underlying principles to life changes. Please communicate and discuss more with AI based on your own understanding, to constantly update your knowledge and judgment, and keep up with the advancement of technology.
-
-  </p><p>From the accumulation of eating habits and lifestyles in the process of human evolution, we have built a collaborative life model of our body organs and systemic flora. The rapid modernization process and low cost of living allow our bodies to quickly obtain nutritional intake that exceeds the processing limit. Leading to systemic nutritional poisoning of body organs, which may be the cause of diseases such as diabetes, gout, and liver cirrhosis. The world is rapidly industrializing and modernizing, but our body's evolution speed is still stuck in the agricultural era and has not yet adapted to the rapid changes in modern society. , please slow down the intake of food nutrients to provide a buffer time for the body's evolution.
-  </p><p>Modern industrialized products are all driven by profit. Blindly believing that these things invented in a short period of time can replace the abilities that humans have evolved over millions of years may more easily destroy health.
-
-  </p><p>For example, in the monkey age, we ate bird eggs and fruits, so these things are definitely suitable for our bodies, as long as we don’t overdo it; for example, we have a history of eating fat for millions of years, so I will eat animal fat; for example, 100,000 years ago, humans consumed a lot of fat, which caused a 4-fold increase in brain capacity. This makes me suspect that if we do not maintain sufficient fat intake, it may lead to the risk of brain atrophy, which is why I dare not be completely vegetarian. For example, I found that the oil in the range hood was as hard to clean as rubber, which reminded me that these rubbery things accumulated in the brain through the nasal passages, so I stopped eating regular vegetable oil and switched to boiling a small amount of animal oil instead. Try some extra olive oil and flaxseed oil
-
-  </p><p>I don’t believe in the traditional cold treatment logic, because we can keep a certain distance from the virus and rely on the body’s ability to coexist with the virus. I don’t believe in the gold standard of the eyewear industry, so I wear glasses because I believe my own glasses can be adjusted back. I don’t believe in the logic of calcium supplementation. I think calcium deficiency is just due to lack of enough exercise or insufficient bone load, which causes the body to reject calcium absorption.
-
-  </p><p>Build the body's healthy defense line based on early prevention and preparation, control your diet like a diabetic patient, prevent diabetic gout, eat like a cancer patient, try to keep your body in an anti-cancer environment, and reduce the formation of cancer cells. Such as various lifestyle changes to improve immunity.
-
-  </p><p>In addition, the risks and prevention of plastic particles in the brain also need to be adjusted and controlled in all aspects of life.
-
-  </p><p>In these cognitive conditions, one of the most harmful and body-destroying lifestyles is to put all the nutritional fats in the pot and simmer the food for a long time so that the nutrients can be absorbed by the body in large quantities and quickly. For example, if every stewed rice is stewed in one pot with high nutrition, and the taste and salt content are maintained, this kind of eating method for a long time may have adverse effects on the body within a few months. Easily absorbed and hydrolyzed by the body is a criterion for judging the friendliness of food and the body. However, it should not be eaten in large quantities frequently, so that at least more than 60% of the food is processed quickly. This simulates the pace of life of the previous generation who did not have a rice cooker and lacked time to cook. It also gives the kidneys and liver the opportunity to process food slowly, especially dinner. Do not leave too much burden on the body.
-  <hr />
-  
-  </p><p><a href='./logs/Soy Pudding (Douhua).md'>Bifidobacterium soy pudding</a>: Improves intestinal flora balance, enhances immunity, promotes digestive health, and prevents diarrhea and constipation
-  </p><p>Oats, barley kernels, rye, increased beta glucan: enhance immunity, lower cholesterol, improve intestinal health, anti-inflammatory and anti-diabetic
-  </p><p>Natto: cardiovascular, bone, immune system, digestive function and anti-aging
-  </p><p>Broccoli seedlings: anti-cancer, antioxidant, cardiovascular protection, immune enhancement, digestion improvement
-  </p><p>Curcumin: antioxidant, anti-inflammatory, antibacterial, anti-cancer
-  </p><p>Low-temperature cooking with boiled water and resistant starch
-  </p><p>Vision protection and adjustment
-  </p><p>Cold prevention and rapid recovery
-  </p><p>Plastic particle risk management and control
-  </p><p>Ultraviolet rays identify environmental fluorescent agents, mildew, and fluorescent pollution in clothing
-  </p>
-<!--enend-->
+  <!--enend-->
   </div>
 
 <div id="zh-content" style="display:none;">
