@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const translate = require('@vitalets/google-translate-api');
 
-const LOGS_DIR = '../logs';
+const LOGS_DIR = './logs';
 
 // 正则表达式：用于提取内容和定位替换位置
 const ZH_PATTERN = /<!---zh-->([\s\S]*?)<!--zhend-->/;
