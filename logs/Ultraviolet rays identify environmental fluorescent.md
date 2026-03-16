@@ -10,7 +10,18 @@
 
 <div id="en-content" style="display:block;">
   <!---en-->
-  <!--enend-->
+<h2>Ultraviolet rays identify environmental fluorescent agents, mildew, and fluorescent pollution in clothing</h2>
+<p>It is recommended to purchase a 365nm wavelength black light filtered UV lamp (with black mirror filter) and wear professional 365nm UV protective glasses. Without protective glasses, not only will there be huge errors in color recognition, but ultraviolet rays and their mirror reflections will seriously burn the cornea.
+</p><p>Identification Guide:
+</p><p>1. Distinguish between fluorescent agents and natural reactions: If pure cotton material is mixed with hair oil (sebum), a reaction similar to fluorescence may occur under ultraviolet light, so you need to pay attention to the distinction.
+</p><p>2. Identification of pollution sources: The primary filter cotton of air purifiers, clothing, washing powder and some cosmetics often contain allergen-level fluorescent agents.
+</p><p>3. Mildew and food: Food residue is usually light yellow, while mildew usually shows bright white fluorescence.
+</p><p>4. Material characteristics:
+<br>• TPU mobile phone case: should be light yellow and contain no fluorescent agent.
+<br>• High borosilicate glass: It should have no obvious fluorescent color or be very light yellow under ultraviolet light, and have extremely high light transmittance. There is no ripple in the image of objects behind when viewed through the glass.
+<br>• Food-grade lead-free soda-lime glass: usually appears light yellow or light green, and the image of objects behind it looks like a ripple when viewed through the glass.
+  </p>
+<!--enend-->
 </div>
 
 <div id="zh-content" style="display:none;">

@@ -37,8 +37,8 @@
   </p><p>Low-temperature cooking with boiled water and resistant starch
   </p><p>Vision protection and adjustment
   </p><p>Cold prevention and rapid recovery
-  </p><p>Plastic particle risk management and control
-  </p><p>Ultraviolet rays identify environmental fluorescent agents, mildew, and fluorescent pollution in clothing
+  </p><p><a href='./logs/Plastic particle risk management and control.md'>Plastic particle risk management and control
+  </p><p><a href='./logs/Ultraviolet rays identify environmental fluorescent.md'>Ultraviolet identifies environmental fluorescent agents, mildew, and fluorescent pollution in clothing
   </p>
 <!--enend-->
   </div>
