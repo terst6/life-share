@@ -60,7 +60,7 @@ async function processFile(filePath) {
 
 		// 1. 先构造“中文标记更新了 hash”后的新中文块
 		// 注意：我们要保留英文块之后、中文标记之前的所有内容（如果有的话）
-		const newZhStartTag = ZH_START + currentHash + ZH_STARTEND;
+		const newZhStartTag = ZH_START + currentHash// + ZH_STARTEND;
 		
 		// 2. 既然英文在最前面，我们直接用原 content 的索引来切分
 		const finalContent = 
