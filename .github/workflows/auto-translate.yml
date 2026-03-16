@@ -41,6 +41,9 @@ jobs:
           cp -f logs/README.md ./README.md
           echo "已同步 logs/README.md 到根目录"
 
+      - name: Wait for Disk Sync
+        run: sleep 2 # 给文件系统 2 秒钟反应时间，确保所有文件写入已落盘
+
       - name: Commit and Push Changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
