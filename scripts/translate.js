@@ -2,6 +2,7 @@ const path = require('path'); // 在文件最顶部
 const crypto = require('crypto');
 const fs = require('fs');
 
+const { translate } = require('@vitalets/google-translate-api');
 const LOGS_DIR = './logs';
 
 // 正则表达式：用于提取内容和定位替换位置
