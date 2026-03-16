@@ -1,0 +1,48 @@
+name: Auto Translate Logs
+
+on:
+  push:
+    paths:
+      - 'logs/**.md'     # 只有 logs 目录下的 md 文件变动时触发
+      - 'scripts/**'     # 脚本变动时也触发测试
+  workflow_dispatch:      # 允许手动触发执行
+
+jobs:
+  build-and-translate:
+    runs-on: ubuntu-latest
+    
+    # 必须授予写权限，否则无法提交翻译后的内容
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          # 取回所有历史记录，确保能够 push
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        # 即使没有 package.json 也可以直接安装所需库
+        run: npm install @vitalets/google-translate-api
+
+      - name: Run Translation Script
+        run: node scripts/translate.js
+
+      - name: Commit and Push Changes
+        run: |
+          # 检查是否有文件被修改，避免没有变动时 commit 报错
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git add logs/*.md
+            git commit -m "docs: auto-translate logs contents [skip ci]"
+            git push
+          else
+            echo "No changes detected, skipping commit."
+          fi
