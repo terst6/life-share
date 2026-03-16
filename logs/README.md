@@ -1,5 +1,5 @@
 
-# Maintaining the Continuity of Lifestyle from the Perspective of Genetics and Human Evolution! / 从遗传学与人test2 类进化角度保持生活方式的延续性
+# Maintaining the Continuity of Lifestyle from the Perspective of Genetics and Human Evolution! / 从遗传学与人类进化角度保持生活方式的延续性
 
 <p>
   <button onclick="document.getElementById('en-content').style.display = 'block'; 
@@ -37,8 +37,8 @@
   </p><p>Low-temperature cooking with boiled water and resistant starch
   </p><p>Vision protection and adjustment
   </p><p>Cold prevention and rapid recovery
-  </p><p><a href='./logs/Plastic particle risk management and control.md'>Plastic particle risk management and control
-  </p><p><a href='./logs/Ultraviolet rays identify environmental fluorescent.md'>Ultraviolet identifies environmental fluorescent agents, mildew, and fluorescent pollution in clothing
+  </p><p>Plastic particle risk management and control
+  </p><p>Ultraviolet rays identify environmental fluorescent agents, mildew, and fluorescent pollution in clothing
   </p>
 <!--enend-->
   </div>
