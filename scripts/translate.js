@@ -11,6 +11,7 @@ const ZH_PATTERN = /<!---zh-->([\s\S]*?)<!--zhend-->/;
 const EN_PATTERN = /(<!---en-->)[\s\S]*?(<!--enend-->)/;
 
 async function processFile(filePath) {
+    console.log(`处理文件${filepath}...`);
     let content = fs.readFileSync(filePath, 'utf8');
 
     // 1. 提取中文块内容
@@ -49,7 +50,10 @@ async function processFile(filePath) {
 }
 
 async function main() {
-    if (!fs.existsSync(LOGS_DIR)) return;
+    if (!fs.existsSync(LOGS_DIR)) {
+      console.log(`[目录不存在]`);
+      return;
+    }
 
     const files = fs.readdirSync(LOGS_DIR).filter(f => f.endsWith('.md'));
     
