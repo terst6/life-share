@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const translate = require('@vitalets/google-translate-api');
+// 核心修复：使用花括号解构出 translate 函数
+
+const { translate } = require('@vitalets/google-translate-api');
 
 const LOGS_DIR = './logs';
 
