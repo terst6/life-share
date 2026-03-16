@@ -34,6 +34,21 @@ jobs:
       - name: Run Translation Script
         run: node scripts/translate.js
 
+      - name: Sync README to root
+        run: |
+          # 假设你要同步的文件是 logs/README.md
+          # 使用 cp -f 强制覆盖根目录的 README
+          cp -f logs/README.md ./README.md
+          echo "已同步 logs/README.md 到根目录"
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          # 确保 add 包含了根目录的 README
+          git add logs/*.md README.md
+          git diff --staged --quiet || (git commit -m "docs: update translations and sync root README" && git push)
+
       - name: Commit and Push Changes
         run: |
           # 检查是否有文件被修改，避免没有变动时 commit 报错

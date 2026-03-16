@@ -72,8 +72,8 @@
   </p><p>低温烹饪水煮与抗性淀粉
   </p><p>视力保护与调节
   </p><p>感冒的预防与快速恢复
-  </p><p>塑料颗粒风险管控
-  </p><p>紫外线识别环境荧光剂，霉变，衣物荧光污染
+  </p><p><a href='./logs/Plastic particle risk management and control.md'>塑料颗粒风险管控
+  </p><p><a href='./logs/Ultraviolet rays identify environmental fluorescent.md'>紫外线识别环境荧光剂，霉变，衣物荧光污染
   </p>
   <!--zhend-->
   </div>
