@@ -1,50 +1,78 @@
+const path = require('path'); // 在文件最顶部
+const crypto = require('crypto');
 const fs = require('fs');
-const path = require('path');
-// 核心修复：使用花括号解构出 translate 函数
-
-const { translate } = require('@vitalets/google-translate-api');
 
 const LOGS_DIR = './logs';
 
 // 正则表达式：用于提取内容和定位替换位置
-const ZH_PATTERN = /<!---zh-->([\s\S]*?)<!--zhend-->/;
-const EN_PATTERN = /(<!---en-->)[\s\S]*?(<!--enend-->)/;
+const ZH_START = '<!---zh(';
+const ZH_STARTEND = ')-->';
+const ZH_END = '<!--zhend-->';
+const EN_START = '<!---en-->';
+const EN_END = '<!--enend-->';
+
+// 计算 MD5 Hash 的工具函数
+function getHash(text) {
+    return crypto.createHash('md5').update(text).digest('hex');
+}
 
 async function processFile(filePath) {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
 
-    // 1. 提取中文块内容
-    const zhMatch = content.match(ZH_PATTERN);
-    if (!zhMatch || !zhMatch[1].trim()) {
-        console.log(`[跳过] ${path.basename(filePath)}: 未找到中文内容。`);
-        return;
-    }
-
-    const textToTranslate = zhMatch[1].trim();
-
-    // 2. 检查是否存在英文目标块
-    if (!EN_PATTERN.test(content)) {
-        console.log(`[跳过] ${path.basename(filePath)}: 缺少 ---en-- 标记。`);
-        return;
-    }
-
-    try {
-        // 3. 执行翻译
-        console.log(`[处理中] ${path.basename(filePath)}...`, textToTranslate.length);
-        const res = await translate(textToTranslate, { to: 'en', format: 'html' });
+    // 1. 定位中文块起始和结束
+    const zhStartIdx = content.indexOf(ZH_START);
+    const zhStartCloseIdx = content.indexOf(ZH_STARTEND, zhStartIdx);
+    const zhEndIdx = content.indexOf(ZH_END);
         
-        // 格式化翻译后的内容（保持首尾换行，观感更好）
-        const translatedContent = `\n${res.text}\n`;
+	// 计算英文块
+	const newEnStartIdx = content.indexOf(EN_START);
+	const newEnEndIdx = content.indexOf(EN_END);
 
-        // 4. 替换英文块：保留 ---en-- 和 --enend-- 标签，只换中间内容
-        // $1 代表 ---en--，$2 代表 --enend--
-        const newContent = content.replace(EN_PATTERN, `$1${translatedContent}$2`);
+    if (zhStartIdx === -1 || zhStartCloseIdx === -1 || zhEndIdx === -1) {
+        console.log(`[跳过] ${filePath}: 未找到完整的中文标记块`);
+        return;
+    }
 
-        fs.writeFileSync(filePath, newContent, 'utf8');
-        console.log(`[成功] ${path.basename(filePath)} 已更新翻译。${content.length}=>${newContent.length}[S{translatedContent.length}]`);
+    if (newEnStartIdx === -1 || newEnEndIdx === -1) {
+        console.log(`[跳过] ${filePath}: 未找到完整的英文标记块`);
+        return;
+    }
 
+    // 提取旧的 Hash（从 之间）
+    const oldHash = content.substring(zhStartIdx + ZH_START.length, zhStartCloseIdx);
+    // 提取当前的中文内容
+    const currentZhContent = content.substring(zhStartCloseIdx + ZH_STARTEND.length, zhEndIdx).trim();
+    
+    // 2. Hash 校验
+    const currentHash = getHash(currentZhContent);
+    if (currentHash === oldHash) {
+        console.log(`[忽略] ${filePath}: 内容未变化，跳过翻译`);
+        return;
+    }
+
+    console.log(`[发现更新] ${filePath}: 正在翻译...`);
+
+    // 3. 执行翻译 (假设你已经解构了 translate)
+    try {
+		const res = await translate(currentZhContent, { to: 'en', format: 'text' });
+		const translatedText = res.text;
+
+		// 1. 先构造“中文标记更新了 hash”后的新中文块
+		// 注意：我们要保留英文块之后、中文标记之前的所有内容（如果有的话）
+		const newZhStartTag = ZH_START + currentHash + ZH_STARTEND;
+		
+		// 2. 既然英文在最前面，我们直接用原 content 的索引来切分
+		const finalContent = 
+			content.substring(0, newEnStartIdx + EN_START.length) + // 英文起始标签
+			"\n" + translatedText + "\n" +                          // 翻译内容
+			content.substring(newEnEndIdx, zhStartIdx) +            // 英文结束标签 到 中文起始标签 之间的内容
+			newZhStartTag +                                         // 更新了 Hash 的中文起始标签
+			content.substring(zhStartCloseIdx);                     // 从旧中文起始标签结尾到文件末尾
+
+		fs.writeFileSync(filePath, finalContent, 'utf8');
+		console.log(`[成功] ${filePath}: 已更新`);
     } catch (err) {
-        console.error(`[失败] ${path.basename(filePath)}: ${err.message}`);
+        console.error(`[错误] ${filePath} 翻译失败:`, err.message);
     }
 }
 
