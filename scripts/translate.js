@@ -41,7 +41,7 @@ async function processFile(filePath) {
         const newContent = content.replace(EN_PATTERN, `$1${translatedContent}$2`);
 
         fs.writeFileSync(filePath, newContent, 'utf8');
-        console.log(`[成功] ${path.basename(filePath)} 已更新翻译。`, translatedContent.length);
+        console.log(`[成功] ${path.basename(filePath)} 已更新翻译。${content.length}=>${newContent.length}[S{translatedContent.length}]`);
 
     } catch (err) {
         console.error(`[失败] ${path.basename(filePath)}: ${err.message}`);
