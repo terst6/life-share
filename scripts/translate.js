@@ -11,7 +11,7 @@ const ZH_PATTERN = /<!---zh-->([\s\S]*?)<!--zhend-->/;
 const EN_PATTERN = /(<!---en-->)[\s\S]*?(<!--enend-->)/;
 
 async function processFile(filePath) {
-    console.log(`处理文件${filepath}...`);
+    console.log(`处理文件${filePath}...`);
     let content = fs.readFileSync(filePath, 'utf8');
 
     // 1. 提取中文块内容
