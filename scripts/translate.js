@@ -71,7 +71,7 @@ async function processFile(filePath) {
 			content.substring(zhStartCloseIdx);                     // 从旧中文起始标签结尾到文件末尾
 
 		fs.writeFileSync(filePath, finalContent, 'utf8');
-		console.log(`[成功] ${filePath}: 已更新`);
+		console.log(`[成功] ${filePath}: 已更新`, content.length, finalContent.length, newZhStartTag);
     } catch (err) {
         console.error(`[错误] ${filePath} 翻译失败:`, err.message);
     }
