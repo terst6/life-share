@@ -11,7 +11,6 @@ const ZH_PATTERN = /<!---zh-->([\s\S]*?)<!--zhend-->/;
 const EN_PATTERN = /(<!---en-->)[\s\S]*?(<!--enend-->)/;
 
 async function processFile(filePath) {
-    console.log(`处理文件${filePath}...`);
     let content = fs.readFileSync(filePath, 'utf8');
 
     // 1. 提取中文块内容
@@ -31,7 +30,7 @@ async function processFile(filePath) {
 
     try {
         // 3. 执行翻译
-        console.log(`[处理中] ${path.basename(filePath)}...`, textToTranslate);
+        console.log(`[处理中] ${path.basename(filePath)}...`, textToTranslate.length);
         const res = await translate(textToTranslate, { to: 'en', format: 'html' });
         
         // 格式化翻译后的内容（保持首尾换行，观感更好）
@@ -42,7 +41,7 @@ async function processFile(filePath) {
         const newContent = content.replace(EN_PATTERN, `$1${translatedContent}$2`);
 
         fs.writeFileSync(filePath, newContent, 'utf8');
-        console.log(`[成功] ${path.basename(filePath)} 已更新翻译。`, translatedContent);
+        console.log(`[成功] ${path.basename(filePath)} 已更新翻译。`, translatedContent.length);
 
     } catch (err) {
         console.error(`[失败] ${path.basename(filePath)}: ${err.message}`);
