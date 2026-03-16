@@ -31,7 +31,7 @@ async function processFile(filePath) {
 
     try {
         // 3. 执行翻译
-        console.log(`[处理中] ${path.basename(filePath)}...`);
+        console.log(`[处理中] ${path.basename(filePath)}...`, textToTranslate);
         const res = await translate(textToTranslate, { to: 'en', format: 'html' });
         
         // 格式化翻译后的内容（保持首尾换行，观感更好）
@@ -42,7 +42,7 @@ async function processFile(filePath) {
         const newContent = content.replace(EN_PATTERN, `$1${translatedContent}$2`);
 
         fs.writeFileSync(filePath, newContent, 'utf8');
-        console.log(`[成功] ${path.basename(filePath)} 已更新翻译。`);
+        console.log(`[成功] ${path.basename(filePath)} 已更新翻译。`, translatedContent);
 
     } catch (err) {
         console.error(`[失败] ${path.basename(filePath)}: ${err.message}`);
